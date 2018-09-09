@@ -6,10 +6,14 @@ using System.Web.Mvc;
 
 namespace MCGA.website.Controllers
 {
+
+    //[Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
+            var x = User.Identity.IsAuthenticated;
+            var r = User.IsInRole("admin");
             return View();
         }
 

@@ -18,6 +18,7 @@ namespace MCGA.website
     {
         public Task SendAsync(IdentityMessage message)
         {
+
             // Conecte su servicio de correo electrónico aquí para enviar correo electrónico.
             return Task.FromResult(0);
         }
