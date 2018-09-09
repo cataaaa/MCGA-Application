@@ -11,6 +11,7 @@ namespace MCGA.website
 {
     public partial class Startup
     {
+        //g
         // Para obtener más información para configurar la autenticación, visite http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
