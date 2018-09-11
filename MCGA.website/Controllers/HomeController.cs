@@ -12,7 +12,7 @@ namespace MCGA.website.Controllers
     {
         public ActionResult Index()
         {
-            var l = 0;
+          
             var x = User.Identity.IsAuthenticated;
             var r = User.IsInRole("admin");
             return View();
