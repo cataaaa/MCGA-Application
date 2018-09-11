@@ -13,12 +13,18 @@ namespace MCGA.website.Controllers
 {
     public class TipoEspecialidadController : Controller
     {
+        private MCGA.UI.Process.TipoEspecialidadProcess tipoEsp = new MCGA.UI.Process.TipoEspecialidadProcess();
+
+
+
         private MedicureContext db = new MedicureContext();
 
         // GET: TipoEspecialidad
         public ActionResult Index()
         {
-            return View(db.TipoEspecialidad.ToList());
+            //return View(db.TipoEspecialidad.ToList());
+            return View(tipoEsp.component.ToList());
+           
         }
 
         // GET: TipoEspecialidad/Details/5
@@ -28,7 +34,8 @@ namespace MCGA.website.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TipoEspecialidad tipoEspecialidad = db.TipoEspecialidad.Find(id);
+           TipoEspecialidad tipoEspecialidad = db.TipoEspecialidad.Find(id);
+            //TipoEspecialidad tipoEspecialidad = tipoEsp.component.Find(id);
             if (tipoEspecialidad == null)
             {
                 return HttpNotFound();
